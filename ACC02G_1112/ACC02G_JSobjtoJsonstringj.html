@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		const js_obj = [
+			{"Név": "HTML5",      "kiterjesztés": ".html"},
+			{"Név": "CSS3",       "kiterjesztés": ".css"},
+			{"Név": "JavaScript", "kiterjesztés": ".js"},
+		];
+
+		const json_string = JSON.stringify(js_obj);
+
+		const doIt = () => {
+			const place = document.getElementById('place');
+			place.innerText = json_string;
+		}
+	</script>
+</head>
+<body>
+	<h1>JSON fájl készítése - JavaScript-ben</h1>
+	<p>JSON:</p>
+	<p id="place"></p>
+	<button onclick="doIt();">JSON generálás</button>
+</body>
+</html>

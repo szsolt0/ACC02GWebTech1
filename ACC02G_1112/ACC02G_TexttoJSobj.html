@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSON Text konvertálása JavaScript objektummá!</title>
+</head>
+<body>
+	<h1>JSON Text konvertálása JavaScript objektummá!</h1>
+
+	<ul>
+		<li>Név: <span id="név"></span></li>
+		<li>Irányítószám: <span id="irányítószám"></span></li>
+		<li>Város: <span id="város"></span></li>
+		<li>Egyetem: <span id="egyetem"></span></li>
+	</ul>
+
+	<script>
+		const ACC02G = '{"név": "Sebe Zsolt", "irányítószám": 1776, "város": "Radostyán", "egyetem": "Miskolci Egyetem"}';
+		const place = document.getElementById('place');
+		const js_obj = JSON.parse(ACC02G);
+
+		document.getElementById('név').innerText = js_obj.név;
+		document.getElementById('irányítószám').innerText = js_obj.irányítószám;
+		document.getElementById('város').innerText = js_obj.város;
+		document.getElementById('egyetem').innerText = js_obj.egyetem;
+	</script>
+</body>
+</html>

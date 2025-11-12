@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		const json_string = '[{"Név": "HTML5", "kiterjesztés": ".html"},{"Név": "CSS3", "kiterjesztés": ".css"},{"Név": "JavaScript", "kiterjesztés": ".js"}]';
+		const js_obj = JSON.parse(json_string);
+
+		const doIt = () => {
+			const place = document.getElementById('place');
+			place.innerText = '';
+
+			for (const item of js_obj) {
+				place.innerText += `Név: ${item.Név}, kiterjesztés: ${item.kiterjesztés}\n`;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>JSON fájlfeldolgozás, beolvasás - JavaScript-ben</h1>
+	<p>JSON:</p>
+	<p id="place"></p>
+	<button onclick="doIt();">JSON beolvasása</button>
+</body>
+</html>
