@@ -12,13 +12,17 @@
 	<ul id="place"></ul>
 
 	<script>
+		const place = document.getElementById('place');
+
+		const insert = (book) => {
+			const item = document.createElement('li');
+			item.innerText = `Író: ${book.iro}, Cím: ${book.cim}, Kiadás: ${book.kiadas}`;
+			place.appendChild(item);
+		};
+
 		fetch('ACC02G_konyv.json')
-			.then((res) => res.json())
-			.then((json) => {
-				for (const konyv of json.konyvek.konyv) {
-					document.write(konyv.cim);
-				}
-			});
+			.then(res => res.json())
+			.then(json => json.konyvek.konyv.forEach(insert));
 	</script>
 </body>
 </html>
