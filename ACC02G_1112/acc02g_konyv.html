@@ -20,7 +20,7 @@
 			place.appendChild(item);
 		};
 
-		fetch('ACC02G_konyv.json')
+		fetch('acc02g_konyv.json')
 			.then(res => res.json())
 			.then(json => json.konyvek.konyv.forEach(insert));
 	</script>
