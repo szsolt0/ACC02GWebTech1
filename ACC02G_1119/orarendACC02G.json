@@ -1,0 +1,83 @@
+{
+	"ACC02G_orarend": {
+		"ora": [
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": 10,
+					"ig": 12
+				},
+				"helyszin": "V",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Programtervező Informatikus"
+			},
+			{
+				"targy": "Angol műszaki szaknyelv 1.",
+				"idopont": {
+					"nap": "hétfő",
+					"tol": 12,
+					"ig": 14
+				},
+				"helyszin": "A/1 102",
+				"oktato": "Nagyné Varga Orsolya",
+				"szak": "Programtervező Informatikus"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "kedd",
+					"tol": 10,
+					"ig": 14
+				},
+				"helyszin": "XXXII",
+				"oktato": "Kunné Dr. Tamás Judit",
+				"szak": "Programtervező Informatikus"
+			},
+			{
+				"targy": "Algoritmusok és vizsgálatuk",
+				"idopont": {
+					"nap": "kedd",
+					"tol": 14,
+					"ig": 18
+				},
+				"helyszin": "XXX",
+				"oktato": "Dr. Házy Attila",
+				"szak": "Programtervező Informatikus"
+			},
+			{
+				"targy": "Bevezetés a virtuális valóságba",
+				"idopont": {
+					"nap": "szerda",
+					"tol": 8,
+					"ig": 12
+				},
+				"helyszin": "A/1 102",
+				"oktato": "A1/216",
+				"szak": "Lajos Sándor Ferenc"
+			},
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "szerda",
+					"tol": 12,
+					"ig": 14
+				},
+				"helyszin": "Inf 101",
+				"oktato": "Dr. Bednarik László",
+				"szak": "Programtervező Informatikus"
+			},
+			{
+				"targy": "Vállalati információs rendszerek fejlesztése",
+				"idopont": {
+					"nap": "szerda",
+					"tol": 14,
+					"ig": 18
+				},
+				"helyszin": "Inf 103",
+				"oktato": "Dr. Sasvári Péter László",
+				"szak": "Programtervező Informatikus"
+			}
+		]
+	}
+}
