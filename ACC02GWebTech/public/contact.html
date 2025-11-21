@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kapcsolat - Kórház Időpontfoglaló</title>
+	<link rel="stylesheet" href="/style.css">
+	<!-- jQuery CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="scripts/contact.js" defer></script>
+	<style>
+		/* Custom animations can be added here */
+		.fade-in {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="header-container">
+			<h1>Kórház Időpontfoglaló</h1>
+			<nav>
+				<ul>
+					<li><a href="/">Kezdőlap</a></li>
+					<li><a href="/about.html">Rólunk</a></li>
+					<li><a href="/appointment.html">Időpontfoglalás</a></li>
+					<li><a href="/physicians.html">Orvosaink</a></li>
+					<li><a href="/contact.html">Kapcsolat</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<!-- Main Content -->
+	<main class="fade-in">
+		<section class="text-center mb-12">
+			<h2 class="text-4xl font-bold mb-4">Kapcsolat</h2>
+			<p class="text-lg text-gray-700">Ha kérdése van, vagy segítségre van szüksége, töltse ki az alábbi űrlapot, vagy használja elérhetőségeinket.</p>
+		</section>
+
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<!-- Contact Info -->
+			<div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+				<h3 class="text-xl font-semibold mb-4">Elérhetőségeink</h3>
+				<ul class="text-gray-700 space-y-2">
+					<li><strong>Cím:</strong> 1051 Budapest, Példa utca 1.</li>
+					<li><strong>Telefon:</strong> +36 1 234 5678</li>
+					<li><strong>Fax:</strong> +36 1 234 5679</li>
+					<li><strong>Email:</strong> <a href="mailto:info@example.com" class="text-blue-600 hover:underline">info@example.com</a></li>
+					<li><strong>Web:</strong> <a href="https://www.example.com" target="_blank" class="text-blue-600 hover:underline">www.example.com</a></li>
+				</ul>
+
+				<h4 class="text-lg font-semibold mt-6 mb-2">Jogszabályi adatok</h4>
+				<ul class="text-gray-700 space-y-2">
+					<li><strong>Adószám:</strong> 12345678-1-42</li>
+					<li><strong>Cégjegyzékszám:</strong> 01-09-123456</li>
+					<li><strong>Felelős vezető:</strong> Dr. Példa Péter</li>
+				</ul>
+			</div>
+
+			<!-- Contact Form -->
+			<div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+				<h3 class="text-xl font-semibold mb-4">Üzenetküldés</h3>
+				<form id="contactForm" class="space-y-4" novalidate>
+					<div>
+						<label for="name" class="block mb-1 font-medium">Név</label>
+						<input type="text" id="name" name="name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+					</div>
+					<div>
+						<label for="email" class="block mb-1 font-medium">Email</label>
+						<input type="email" id="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+					</div>
+					<div>
+						<label for="subject" class="block mb-1 font-medium">Tárgy</label>
+						<input type="text" id="subject" name="subject" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+					</div>
+					<div>
+						<label for="message" class="block mb-1 font-medium">Üzenet</label>
+						<textarea id="message" name="message" rows="5" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+					</div>
+					<button id="formBtn" type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Küldés</button>
+				</form>
+				<div id="formMessage" class="mt-4 font-semibold hidden"></div>
+			</div>
+		</section>
+
+		<!-- jQuery Animation -->
+		<script>
+			$(document).ready(function() {
+				$('main').fadeIn(1000);
+
+				// Animate contact info and form
+				$('main section.grid > div').hide().each(function(index) {
+					$(this).delay(200 * index).slideDown(600);
+				});
+			});
+		</script>
+
+		<!-- External JS -->
+	</main>
+
+
+
+	<!-- Footer -->
+	<footer>
+		<div id="footer-container">
+			<p>&copy; 2025 Kórház. Minden jog fenntartva.</p>
+		</div>
+	</footer>
+
+	<!-- jQuery Animations -->
+	<script>
+		$(document).ready(function() {
+			// Fade in main content
+			$('main').fadeIn(1000);
+
+			// Animate each card with slideDown effect
+			$('main section.grid > div').hide().each(function(index) {
+				$(this).delay(200 * index).slideDown(600);
+			});
+
+			// Optional: Animate header links on hover
+			$('header nav a').hover(
+				function() { $(this).fadeTo(200, 0.7); },
+				function() { $(this).fadeTo(200, 1); }
+			);
+		});
+	</script>
+</body>
+</html>

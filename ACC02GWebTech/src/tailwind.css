@@ -1,0 +1,44 @@
+@reference "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+main {
+	@apply grow container mx-auto py-10 px-6;
+}
+
+body {
+	@apply flex flex-col min-h-screen bg-gray-50 text-gray-800;
+}
+
+header {
+	@apply bg-blue-600 text-white shadow;
+}
+
+.header-container {
+	@apply container mx-auto flex justify-between items-center py-4 px-6;
+}
+
+h1 {
+	@apply text-2xl font-bold;
+}
+
+nav > ul {
+	@apply flex space-x-6;
+}
+
+nav a {
+	@apply hover:text-gray-300 transition;
+}
+
+footer {
+	@apply bg-gray-800 text-white py-6 mt-auto;
+}
+
+#footer-container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	max-width: 1280px; /* This is Tailwind's default container width at large screens */
+	padding-left: 1rem;  /* container horizontal padding */
+	padding-right: 1rem;
+}

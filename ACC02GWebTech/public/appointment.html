@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Időpontfoglaló - Kórház Időpontfoglaló</title>
+	<link rel="stylesheet" href="/style.css">
+	<!-- jQuery CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/scripts/appointment.js" defer></script>
+	<style>
+		/* Custom animations can be added here */
+		.fade-in {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="header-container">
+			<h1>Kórház Időpontfoglaló</h1>
+			<nav>
+				<ul>
+					<li><a href="/">Kezdőlap</a></li>
+					<li><a href="/about.html">Rólunk</a></li>
+					<li><a href="/appointment.html">Időpontfoglalás</a></li>
+					<li><a href="/physicians.html">Orvosaink</a></li>
+					<li><a href="/contact.html">Kapcsolat</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="fade-in">
+		<h1 class="text-2xl font-bold mb-4">Időpontfoglalás</h1>
+
+		<form id="appointmentForm" class="space-y-4 bg-gray-50 p-6 rounded shadow-sm">
+
+			<!-- Name -->
+			<div>
+				<label for="name" class="block font-semibold mb-1">Név</label>
+				<input type="text" id="name" name="name" required
+							class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+			</div>
+
+			<!-- Email -->
+			<div>
+				<label for="email" class="block font-semibold mb-1">Email</label>
+				<input type="email" id="email" name="email" required
+							class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+			</div>
+
+			<!-- Favorite color -->
+			<div>
+				<label for="favcolor" class="block font-semibold mb-1">Színválasztás</label>
+				<input type="color" id="favcolor" name="favcolor" value="#0066ff"
+							class="w-16 h-10 border border-gray-300 rounded">
+			</div>
+
+			<!-- Date picker -->
+			<div>
+				<label for="date" class="block font-semibold mb-1">Dátum</label>
+				<input type="date" id="date" name="date" required
+							class="w-48 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+			</div>
+
+			<!-- Time slots (populated dynamically) -->
+			<div id="timeSlots" class="grid grid-cols-3 gap-2 mt-2"></div>
+
+			<!-- Submit -->
+			<div class="mt-4">
+				<button type="button" id="submitBtn"
+								class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+					Foglalás
+				</button>
+			</div>
+
+			<div id="formMessage" class="hidden mt-4 font-semibold"></div>
+		</form>
+	</main>
+
+
+
+	<!-- Footer -->
+	<footer>
+		<div id="footer-container">
+			<p>&copy; 2025 Kórház. Minden jog fenntartva.</p>
+		</div>
+	</footer>
+
+	<!-- jQuery Animations -->
+	<script>
+		$(document).ready(function() {
+			// Fade in main content
+			$('main').fadeIn(1000);
+
+			// Animate each card with slideDown effect
+			$('main section.grid > div').hide().each(function(index) {
+				$(this).delay(200 * index).slideDown(600);
+			});
+
+			// Optional: Animate header links on hover
+			$('header nav a').hover(
+				function() { $(this).fadeTo(200, 0.7); },
+				function() { $(this).fadeTo(200, 1); }
+			);
+		});
+	</script>
+</body>
+</html>

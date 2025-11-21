@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kezdőlap - Kórház Időpontfoglaló</title>
+	<link rel="stylesheet" href="/style.css">
+	<!-- jQuery CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<style>
+		/* Custom animations can be added here */
+		.fade-in {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="header-container">
+			<h1>Kórház Időpontfoglaló</h1>
+			<nav>
+				<ul>
+					<li><a href="/">Kezdőlap</a></li>
+					<li><a href="/about.html">Rólunk</a></li>
+					<li><a href="/appointment.html">Időpontfoglalás</a></li>
+					<li><a href="/physicians.html">Orvosaink</a></li>
+					<li><a href="/contact.html">Kapcsolat</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<!-- Main Content -->
+	<main class="fade-in">
+		<!-- Welcome -->
+		<section class="text-center mb-12">
+			<h2 class="text-4xl font-bold mb-4">Üdvözöljük a Kórházban!</h2>
+			<p class="text-lg text-gray-700">
+				Foglaljon időpontot egyszerűen, tekintse meg orvosainkat és tudjon meg többet rólunk.
+			</p>
+		</section>
+
+		<!-- Image + Video Section -->
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+			<!-- Image -->
+			<!-- src: https://www.pexels.com/photo/low-angle-view-of-office-building-against-sky-323705 -->
+			<div class="bg-white rounded-lg shadow p-6">
+				<h3 class="text-xl font-semibold mb-4">Kórházunk képekben</h3>
+				<img src="/imgs/hospital.jpg" alt="Kórház épülete" class="rounded-lg w-full object-cover">
+			</div>
+
+			<!-- Video -->
+			<!-- src: https://www.pexels.com/video/person-holding-smartphone-7657449 -->
+			<div class="bg-white rounded-lg shadow p-6">
+				<h3 class="text-xl font-semibold mb-4">Bemutatkozó videó</h3>
+				<video controls class="rounded-lg w-full">
+					<source src="imgs/video.mp4" type="video/mp4" />
+					A böngészője nem támogatja a videólejátszást.
+				</video>
+			</div>
+		</section>
+
+		<!-- 3 Cards -->
+		<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+				<h3 class="text-xl font-semibold mb-2">Időpontfoglalás</h3>
+				<p>Foglaljon online időpontot egyszerűen és gyorsan.</p>
+				<a href="appointment.html" class="text-blue-600 font-semibold mt-3 inline-block hover:underline">Tovább</a>
+			</div>
+
+			<div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+				<h3 class="text-xl font-semibold mb-2">Orvosaink</h3>
+				<p>Ismerje meg tapasztalt orvosainkat és szakterületeiket.</p>
+				<a href="physicians.html" class="text-blue-600 font-semibold mt-3 inline-block hover:underline">Tovább</a>
+			</div>
+
+			<div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition duration-300">
+				<h3 class="text-xl font-semibold mb-2">Kapcsolat</h3>
+				<p>Vegye fel velünk a kapcsolatot kérdések vagy segítség miatt.</p>
+				<a href="contact.html" class="text-blue-600 font-semibold mt-3 inline-block hover:underline">Tovább</a>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- Footer -->
+	<footer>
+		<div id="footer-container">
+			<p>&copy; 2025 Kórház. Minden jog fenntartva.</p>
+		</div>
+	</footer>
+
+	<!-- jQuery Animations -->
+	<script>
+		$(document).ready(function() {
+			// Fade in main content
+			$('main').fadeIn(1000);
+
+			// Animate each card with slideDown effect
+			$('main section.grid > div').hide().each(function(index) {
+				$(this).delay(200 * index).slideDown(600);
+			});
+
+			// Optional: Animate header links on hover
+			$('header nav a').hover(
+				function() { $(this).fadeTo(200, 0.7); },
+				function() { $(this).fadeTo(200, 1); }
+			);
+		});
+	</script>
+</body>
+</html>

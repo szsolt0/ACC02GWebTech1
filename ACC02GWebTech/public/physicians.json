@@ -1,0 +1,34 @@
+[
+	{
+		"name": "Dr. Kovács Péter",
+		"work_types": ["szemész", "optometrista"]
+	},
+	{
+		"name": "Dr. Szabó Anna",
+		"work_types": ["fogorvos"]
+	},
+	{
+		"name": "Dr. Tóth Gábor",
+		"work_types": ["gyermekorvos", "pediáter"]
+	},
+	{
+		"name": "Dr. Nagy Éva",
+		"work_types": ["nőgyógyász", "szülész"]
+	},
+	{
+		"name": "Dr. Kiss László",
+		"work_types": ["étkezési tanácsadó", "dietetikus"]
+	},
+	{
+		"name": "Dr. Horváth Zoltán",
+		"work_types": ["belgyógyász", "endokrinológus"]
+	},
+	{
+		"name": "Dr. Farkas Júlia",
+		"work_types": ["pszichiáter"]
+	},
+	{
+		"name": "Dr. Varga Attila",
+		"work_types": ["sebész", "traumatológus"]
+	}
+]

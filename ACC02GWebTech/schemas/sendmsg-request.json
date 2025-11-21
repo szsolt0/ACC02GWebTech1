@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Send Message Request",
+	"type": "object",
+	"required": ["sender", "subject", "content"],
+	"properties": {
+		"sender": {
+			"type": "object",
+			"required": ["name", "reply-to"],
+			"properties": {
+				"name": {
+					"type": "string",
+					"minLength": 1,
+					"description": "Full name of the sender"
+				},
+				"reply-to": {
+					"type": "string",
+					"minLength": 3,
+					"description": "Email address for replies"
+				}
+			},
+			"additionalProperties": false
+		},
+		"subject": {
+			"type": "string",
+			"minLength": 1,
+			"description": "Subject of the message"
+		},
+		"content": {
+			"type": "string",
+			"minLength": 1,
+			"description": "Body of the message"
+		}
+	},
+	"additionalProperties": false
+}
