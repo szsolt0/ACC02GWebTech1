@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="ACC02G_6.js" defer></script>
+</head>
+<body>
+	<h1>jQuery feladat</h1>
+	<p><b>Adjon meg két egész számot!</b></p>
+	<p>A = <input type="number" id="a"></p>
+	<p>B = <input type="number" id="b"></p>
+
+	<div>
+		<input type="radio" id="op-mul" name="operation" value="A*B">
+		<label for="op-mul">A*B</label>
+	</div>
+
+	<div>
+		<input type="radio" id="op-div" name="operation" value="A/B">
+		<label for="op-div">A/B</label>
+	</div>
+
+	<div>
+		<input type="radio" id="op-add" name="operation" value="A+B">
+		<label for="op-add">A+B</label>
+	</div>
+
+	<div>
+		<input type="radio" id="op-sub" name="operation" value="A-B">
+		<label for="op-sub">A-B</label>
+	</div>
+
+	<button id="calc-btn">Számol</button>
+	<p><b>Eredmény:</b> <span id="result"></span></p>
+</body>
+</body>
+</html>
