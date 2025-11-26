@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+	<style>
+		button {
+			width: 2.5rem;
+			height: 2.5rem;
+			line-height: 4;
+			overflow: hidden;
+
+			border: none;
+			border-radius: 0.5rem;
+			background-color: #bdf;
+			box-shadow: 0 0 0 0.125rem #000000bb,
+						inset 0 0 0.25rem 0 #ffffffbb;
+		}
+
+		button:hover {
+			background-color: #9cf;
+		}
+
+		.grid {
+			margin-top: 2rem;
+			display: grid;
+			grid-template-columns: 1fr 2.5fr;
+			grid-template-rows: 1fr 1fr 1fr;
+			gap: 1rem;
+			width: 40rem;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		footer {
+			border-top: 4px solid gray;
+			padding-top: 2rem;
+			margin-top: 2rem;
+			width: 37.5rem;
+			text-align: right;
+		}
+
+		div.grid > div {
+			display: flex;
+			flex-direction: row;
+			gap: 1rem;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>Videó lejátszása_ACC02G</h1>
+
+<main>
+
+	<video id="myVideo">
+		<source src="acc02g_video.mp4" type="video/mp4">
+		A böngésző nem támogatja a HTML5 videókat.
+	</video>
+
+	<div class="controls grid">
+	  <!-- Play / Pause (toggle) -->
+	  <button onclick="playVideo()">
+		<span class="material-symbols-outlined">play_arrow</span>
+	  </button>
+	  <button onclick="pauseVideo()">
+		<span class="material-symbols-outlined">pause</span>
+	  </button>
+
+	  <!-- Mute / Volume up/down -->
+	  <button onclick="muteVideo()">
+		<span class="material-symbols-outlined">volume_off</span>
+	  </button>
+	  <button onclick="volumeDown()">
+		<span class="material-symbols-outlined">volume_down</span>
+	  </button>
+	  <button onclick="volumeUp()">
+		<span class="material-symbols-outlined">volume_up</span>
+	  </button>
+
+	  <!-- Sebesség: very slow, slow, normal, fast, faster -->
+	  <button onclick="setSpeed(0.5)">
+		<span class="material-symbols-outlined">slow_motion_video</span>
+	  </button>
+	  <button onclick="setSpeed(0.75)">
+		<span class="material-symbols-outlined">slow_motion_video</span>
+	  </button>
+	  <button onclick="setSpeed(1)">
+		<span class="material-symbols-outlined">play_circle</span>
+	  </button>
+	  <button onclick="setSpeed(1.5)">
+		<span class="material-symbols-outlined">fast_forward</span>
+	  </button>
+	  <button onclick="setSpeed(2)">
+		<span class="material-symbols-outlined">fast_forward</span>
+	  </button>
+
+	  <!-- Info: ended?, duration, currentTime -->
+	  <button onclick="checkEnded()">
+		<span class="material-symbols-outlined">event</span>
+	  </button>
+	  <button onclick="showDuration()">
+		<span class="material-symbols-outlined">timer</span>
+	  </button>
+	  <button onclick="showPosition()">
+		<span class="material-symbols-outlined">schedule</span>
+	  </button>
+	</div>
+  </main>
+
+</main>
+
+<script>
+	const vid = document.getElementById("myVideo");
+
+	// --- Alap vezérlés ---
+	function playVideo() { vid.play(); }
+	function pauseVideo() { vid.pause(); }
+	function togglePlay() {
+		if (vid.paused) vid.play();
+		else vid.pause();
+	}
+
+	// --- Hangerő ---
+	function muteVideo() { vid.muted = true; }
+	function quietVideo() { vid.muted = false; vid.volume = 0.2; }
+	function loudVideo() { vid.muted = false; vid.volume = 1; }
+
+	// --- Sebesség ---
+	function setSpeed(speed) { vid.playbackRate = speed; }
+
+	// --- Információk ---
+	function checkEnded() {
+		alert(vid.ended ? "A videó befejeződött." : "A videó még nem ért véget.");
+	}
+
+	function showDuration() {
+		alert("A videó hossza: " + Math.round(vid.duration) + " mp");
+	}
+
+	function showPosition() {
+		alert("Jelenlegi pozíció: " + Math.round(vid.currentTime) + " mp");
+	}
+</script>
+
+</body>
+</html>

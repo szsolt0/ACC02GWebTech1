@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+
+<h1>Videó lejátszása_ACC02G</h1>
+
+<main>
+
+	<video id="myVideo">
+		<source src="acc02g_video.mp4" type="video/mp4">
+		A böngésző nem támogatja a HTML5 videókat.
+	</video>
+
+	<div class="controls">
+
+		<!-- Indítás / Leállítás -->
+		<button onclick="playVideo()">Indítás</button>
+		<button onclick="pauseVideo()">Leállítás</button>
+		<button onclick="togglePlay()">Indítás / Leállítás</button>
+
+		<!-- Hangerő -->
+		<button onclick="muteVideo()">Néma</button>
+		<button onclick="quietVideo()">Halk</button>
+		<button onclick="loudVideo()">Hangos</button>
+
+		<!-- Sebesség -->
+		<button onclick="setSpeed(0.25)">Nagyon lassú</button>
+		<button onclick="setSpeed(0.5)">Lassú</button>
+		<button onclick="setSpeed(1)">Normál</button>
+		<button onclick="setSpeed(1.5)">Gyorsabb</button>
+		<button onclick="setSpeed(2)">Nagyon gyors</button>
+
+		<!-- Egyéb információk -->
+		<button onclick="checkEnded()">Befejeződött?</button>
+		<button onclick="showDuration()">Videó hossza</button>
+		<button onclick="showPosition()">Jelenlegi pozíció</button>
+	</div>
+
+</main>
+
+<script>
+	const vid = document.getElementById("myVideo");
+
+	// --- Alap vezérlés ---
+	function playVideo() { vid.play(); }
+	function pauseVideo() { vid.pause(); }
+	function togglePlay() {
+		if (vid.paused) vid.play();
+		else vid.pause();
+	}
+
+	// --- Hangerő ---
+	function muteVideo() { vid.muted = true; }
+	function quietVideo() { vid.muted = false; vid.volume = 0.2; }
+	function loudVideo() { vid.muted = false; vid.volume = 1; }
+
+	// --- Sebesség ---
+	function setSpeed(speed) { vid.playbackRate = speed; }
+
+	// --- Információk ---
+	function checkEnded() {
+		alert(vid.ended ? "A videó befejeződött." : "A videó még nem ért véget.");
+	}
+
+	function showDuration() {
+		alert("A videó hossza: " + Math.round(vid.duration) + " mp");
+	}
+
+	function showPosition() {
+		alert("Jelenlegi pozíció: " + Math.round(vid.currentTime) + " mp");
+	}
+</script>
+
+</body>
+</html>
