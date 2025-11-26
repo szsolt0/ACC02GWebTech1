@@ -81,25 +81,12 @@
 						<label for="message" class="block mb-1 font-medium">Üzenet</label>
 						<textarea id="message" name="message" rows="5" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
 					</div>
-					<button id="formBtn" type="button" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Küldés</button>
+					<button id="formBtn" type="button" class="bg-blue-600 text-white px-6
+					 py-2 rounded hover:bg-blue-700 transition">Küldés</button>
 				</form>
 				<div id="formMessage" class="mt-4 font-semibold hidden"></div>
 			</div>
 		</section>
-
-		<!-- jQuery Animation -->
-		<script>
-			$(document).ready(function() {
-				$('main').fadeIn(1000);
-
-				// Animate contact info and form
-				$('main section.grid > div').hide().each(function(index) {
-					$(this).delay(200 * index).slideDown(600);
-				});
-			});
-		</script>
-
-		<!-- External JS -->
 	</main>
 
 
