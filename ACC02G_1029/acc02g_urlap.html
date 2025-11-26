@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+	section {
+		padding: 15px;
+		margin: 10px;
+		border: 1px solid black;
+		border-radius: 10px;
+		background-color: lightblue;
+	}
+
+	h1 {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>HTML5 Űrlap - ACC02G</h1>
+</header>
+
+<section>
+<form id="myform" action="feldolgozo1.php" method="POST">
+	<label>Név:
+		<input type="text" name="nev" required autocomplete="off" pattern="[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű ]+">
+	</label><br><br>
+
+	<label>PIN kód:
+		<input type="password" name="pin" required pattern="[0-9]{4}">
+	</label><br><br>
+
+	<label>Kedvenc gyümölcs:
+		<input list="gyumolcsok" name="fav_fruit" type="text">
+		<datalist id="gyumolcsok">
+			<option value="alma">alma 250Ft/kg</option>
+			<option value="banán">banán 450Ft/kg</option>
+			<option value="körte">körte 300Ft/kg</option>
+		</datalist>
+	</label><br><br>
+
+	<label>Életkor:
+		<input type="number" name="age" min="1" max="100" step="1">
+	</label><br><br>
+
+	<label>Lábméret:
+		<input type="number" name="feet_size" min="25" max="50" step="0.5">
+	</label><br><br>
+
+	<label>Önbizalom:
+		<input type="range" name="confidence" min="0" max="100">
+	</label>
+</form>
+</section>
+
+<button form="myform" type="submit">Elküld</button>
+<button type="submit" form="myform" formnovalidate>Elküld ellenőrzés nélkül</button>
+
+<footer>
+	Forrás: <a href="https://html5doctor.com" target="_blank">http://html5doctor.com</a><br>
+	Formátumok: <a href="https://www.html5pattern.com" target="_blank">https://www.html5pattern.com</a><br>
+	JavaScript RegExp: <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">https://www.w3schools.com/jsref/jsref_obj_regexp.asp</a>
+</footer>
+</body>
+</html>

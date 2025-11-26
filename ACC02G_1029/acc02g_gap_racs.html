@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		main {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			background-color: blue;
+			border: 1px solid black;
+			gap: 20px 50px;
+		}
+
+		main > div {
+			background-color: yellow;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>A gap tulajdonság rács segítségével</h1>
+	<p>a <i>gap</i> tulajdonsággal adhatjuk meg a sorok és oszlopok közötti távolságot.</p>
+	<p>A rácsnak a sorai között 20px, az oszlopai között pedig 50px a távolság.</p>
+
+	<main>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+	</main>
+</body>
+</html>
