@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="jquery/jquery-ui.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="jquery/jquery-ui.js"></script>
+	<script src="acc02gui_6.js" defer></script>
+	<style>
+		body {
+			font-family: Arial;
+			margin: 30px;
+		}
+
+		h1 {
+			margin-bottom: 25px;
+		}
+
+		.section {
+			padding: 20px;
+			border: 2px solid #ccc;
+			margin-bottom: 40px;
+			border-radius: 8px;
+		}
+
+		#anim-box {
+			position: absolute;
+			left: 300px;
+			top: 250px;
+			width: 300px;
+			height: 150px;
+			background: #6ea8ff;
+			color: black;
+			text-align: center;
+			line-height: 150px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		/* Calculator layout */
+		#calc-area p {
+			margin: 6px 0;
+		}
+		#calc-dialog {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+<h1>jQuery UI - Két feladat egy oldalon (Task 7)</h1>
+
+<!-- ACC02G_1126/ACC02G_5 -->
+
+<div class="section">
+	<h2>1. Feladat - Animáció + jQuery UI</h2>
+
+	<button id="startAnim">Animáció indítása</button>
+	<button id="hideParas">Bekezdések elrejtése</button>
+	<button id="toggleBox">Összecsuk / Kinyit</button>
+
+	<p id="p1"><b>A jQuery egy JavaScript programozói könyvtár, amelyet John Resig kezdett fejleszteni.</b></p>
+	<p id="p2">Elterjedtnek tekinthető, segítségével könnyen bejárható egy HTML oldal DOM-ja.</p>
+	<p id="p3"><b>Effekteket és animációkat adhatunk HTML elemeinkhez. Számtalan plugint írtak hozzá.</b></p>
+
+	<div id="anim-box">ME GEIK - PTI</div>
+</div>
+
+
+
+<!-- ACC02G_1126/ACC02G_6 -->
+
+<div class="section">
+	<h2>2. Feladat - Számológép + jQuery UI</h2>
+
+	<div id="calc-area">
+
+		<p><b>Adjon meg két egész számot!</b></p>
+
+		<p>A = <input type="number" id="a"></p>
+		<p>B = <input type="number" id="b"></p>
+
+		<div id="op-buttons">
+			<input type="radio" id="op-mul" name="operation" value="mul">
+			<label for="op-mul">A*B</label>
+
+			<input type="radio" id="op-div" name="operation" value="div">
+			<label for="op-div">A/B</label>
+
+			<input type="radio" id="op-add" name="operation" value="add">
+			<label for="op-add">A+B</label>
+
+			<input type="radio" id="op-sub" name="operation" value="sub">
+			<label for="op-sub">A-B</label>
+		</div>
+
+		<button id="calc-btn">Számol</button>
+
+		<!-- Result dialog -->
+		<div id="calc-dialog" title="Eredmény">
+			<p id="dialog-result"></p>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>
