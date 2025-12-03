@@ -1,0 +1,105 @@
+{
+	"kurzus": [
+		{
+			"targy": "Web technológiák 1.",
+			"idopont": {
+				"nap": "hétfő",
+				"tol": 10,
+				"ig": 12
+			},
+			"helyszin": "V",
+			"oktato": "Dr. Agárdi Anita",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Angol műszaki szaknyelv 1.",
+			"idopont": {
+				"nap": "hétfő",
+				"tol": 12,
+				"ig": 14
+			},
+			"helyszin": "A/1 102",
+			"oktato": "Nagyné Varga Orsolya",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Mesterséges intelligencia alapok",
+			"idopont": {
+				"nap": "kedd",
+				"tol": 10,
+				"ig": 14
+			},
+			"helyszin": "XXXII",
+			"oktato": "Kunné Dr. Tamás Judit",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Algoritmusok és vizsgálatuk",
+			"idopont": {
+				"nap": "kedd",
+				"tol": 14,
+				"ig": 18
+			},
+			"helyszin": "XXX",
+			"oktato": "Dr. Házy Attila",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Bevezetés a virtuális valóságba",
+			"idopont": {
+				"nap": "szerda",
+				"tol": 8,
+				"ig": 12
+			},
+			"helyszin": "A/1 102",
+			"oktato": "A1/216",
+			"szak": "Lajos Sándor Ferenc",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Web technológiák 1.",
+			"idopont": {
+				"nap": "szerda",
+				"tol": 12,
+				"ig": 14
+			},
+			"helyszin": "Inf 101",
+			"oktato": "Dr. Bednarik László",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		},
+		{
+			"targy": "Vállalati információs rendszerek fejlesztése",
+			"idopont": {
+				"nap": "szerda",
+				"tol": 14,
+				"ig": 18
+			},
+			"helyszin": "Inf 103",
+			"oktato": "Dr. Sasvári Péter László",
+			"szak": "Programtervező Informatikus",
+			"tipus": "Gyk."
+		}
+	],
+
+	"cim": {
+		"iranyitoszam": 3515,
+		"varos": "Miskolc",
+		"utca": "Egyetemváros"
+	},
+
+	"telefonszam": [
+		{
+			"tipus": "Vezetékes",
+			"szam": "0646 555-125"
+		},
+		{
+			"tipus": "Mobil",
+			"szam": "0670 555-4567"
+		}
+	]
+}

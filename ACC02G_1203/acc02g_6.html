@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="acc02g_6.js" defer></script>
+	<style>
+		#box {
+			width: 230px;
+			height: 160px;
+			background: #7c87d8; /* purple-like color in sample */
+			color: black;
+			padding: 20px;
+			margin-top: 20px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		label {
+			display: inline-block;
+			width: 80px;
+			margin-top: 15px;
+		}
+
+		input {
+			width: 220px;
+			padding: 4px;
+			margin-top: 10px;
+		}
+
+		#submit-btn {
+			margin-top: 20px;
+		}
+
+		#source {
+			margin-top: 30px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>jQuery feladatok</h1>
+
+<button id="removeBox">Doboz eltávolítása</button>
+<button id="emptyDivs">A DIV elemek kiürítése</button>
+
+<div id="box">
+	THE - PTI
+	<br><br>
+	•••••
+</div>
+
+<div id="form-area">
+	<label>Név:</label>
+	<input type="text"><br>
+
+	<label>E-mail:</label>
+	<input type="email"><br>
+
+	<label>Jelszó:</label>
+	<input type="password"><br>
+
+	<button id="submit-btn">Jelentkezés</button>
+</div>
+
+<p id="source">
+	<b>Forrás:</b>
+	<a href="http://www.w3schools.com/jquery/jquery_dom_get.asp" target="_blank">
+		http://www.w3schools.com/jquery/jquery_dom_get.asp
+	</a>
+</p>
+</body>
+</html>
